@@ -12,33 +12,7 @@
 
 ---
 
-## DESCRIPCIÓN
-
-**NekoManga** es una plataforma web dedicada a catalogar y leer mangas **poco conocidos o difíciles de encontrar**. Permite explorar una biblioteca, buscar por título, filtrar por género, leer capítulos, guardar favoritos y participar en una comunidad de lectores.
-
-## CARACTERÍSTICAS
-
-- **Biblioteca de manga**:
-- **Buscador**:
-- **Filtros avanzados y géneros**:
-- **Lector de manga**: 
-- **Favoritos**: 
-- **Cuenta de usuario**: 
-- **Perfil**: 
-- **Actualizaciones**:
-- **Eventos**: 
-- **Comunidad**: 
-- **Diseño responsive**:
-
-
-```
-NekoManga/
-├──index.html 
-├── pages/ Páginas: biblioteca, manga, lector, eventos, comunidad, perfil, iniciar-sesion,
-│                     
-├── css/ Estilos: variables, main, header, hero, sections, cards, carousel, pages, auth,profile, responsive
-│                      
-│                     
+```                  
 ├── js/
 │   ├── main.js
 │   ├── components/   # header, footer, modal
