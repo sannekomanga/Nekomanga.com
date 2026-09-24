@@ -84,5 +84,22 @@
     { "title": "Rosen Garten Saga", "chapter": "Capítulo 78", "time": "hace 1 h", "link": "#" },
     { "title": "RaW Hero", "chapter": "Capítulo 41", "time": "hace 5 h", "link": "#" },
     { "title": "Himenospia", "chapter": "Capítulo 41", "time": "hace 3 días", "link": "#" } 
-]
 }
+],
+    "events": [
+    {
+      "id": 1,
+      "title": "Evento VI",
+      "subtitle": "Edición Limitada",
+      "date": "15 Nov 2025",
+      "type": "Principal"
+  },   
+  {
+      "id": 2,
+      "title": "VI · VIP",
+      "subtitle": "Zona Premium",
+      "date": "15 Nov 2025",
+      "type": "VIP"
+  }
+  ]
+  }
