@@ -1,0 +1,135 @@
+{
+  "site": {
+    "name": "nekomanga",
+    "version": "2.0.0"
+  },
+
+  "_comentario_heroSlides": "Slides del carrusel principal. Para agregar/editar un manga destacado, solo toca este arreglo — el HTML se genera solo.",
+  "heroSlides": [
+    {
+      "id": "jujutsu-kaisen",
+      "title": "Jujutsu Kaisen",
+      "titleJp": "呪術廻戦",
+      "posterJp": "呪いと戦え",
+      "chapterTag": "Capítulo 268",
+      "magazine": "Shōnen Jump",
+      "rating": 4.9,
+      "genres": ["Acción", "Sobrenatural", "Oscuro"],
+      "synopsis": "Un niño traga un talismán maldito —la mano de un demonio— y se vuelve maldito él mismo. Se adentra en el colegio de chamanes para poder localizar los demás fragmentos de Sukuna y así morir rodeado de gente.",
+      "themeColor": "#ff2a5f",
+      "themeGlow": "rgba(255, 42, 95, 0.4)",
+      "onAccentText": null,
+      "bgImage": "assets/covers/jujutsu-kaisen-bg.jpg",
+      "coverImage": "assets/covers/jujutsu-kaisen.jpg",
+      "chapterLabel": "Último Estreno",
+      "chapterTitle": "Cap. 268: Conclusión",
+      "link": "#"
+    },
+    {
+      "id": "chainsaw-man",
+      "title": "Chainsaw Man",
+      "titleJp": "チェンソーマン",
+      "posterJp": "悪魔を屠れ",
+      "chapterTag": "Arc 2: Escuela",
+      "magazine": "Jump+",
+      "rating": 4.8,
+      "genres": ["Gore", "Comedia Negra", "Demonios"],
+      "synopsis": "Denji es un joven atrapado en la miseria que paga las deudas de su padre difunto cazando demonios con Pochita. Tras una traición, renace como un híbrido con demonio motosierra.",
+      "themeColor": "#ffb703",
+      "themeGlow": "rgba(255, 183, 3, 0.4)",
+      "onAccentText": "#000",
+      "bgImage": "assets/covers/chainsaw-man-bg.jpg",
+      "coverImage": "assets/covers/chainsaw-man.jpg",
+      "chapterLabel": "Nuevo Capítulo",
+      "chapterTitle": "Cap. 174: El Demonio Envejecimiento",
+      "link": "#"
+    },
+    {
+      "id": "solo-leveling",
+      "title": "Solo Leveling",
+      "titleJp": "나 혼자만",
+      "posterJp": "影の王",
+      "chapterTag": "Manhwa Premium",
+      "magazine": "KakaoPage",
+      "rating": 5.0,
+      "genres": ["Fantasía", "Sistema", "Monstruos"],
+      "synopsis": "En un mundo donde cazadores humanos enfrentan mortales monstruos, Sung Jin-woo, el cazador más débil de la humanidad, obtiene una misteriosa interfaz que le permite subir de nivel sin límites.",
+      "themeColor": "#00d2ff",
+      "themeGlow": "rgba(0, 210, 255, 0.4)",
+      "onAccentText": "#000",
+      "bgImage": "assets/covers/solo-leveling-bg.jpg",
+      "coverImage": "assets/covers/solo-leveling.jpg",
+      "chapterLabel": "Temporada Final",
+      "chapterTitle": "Cap. 200: El Monarca de las Sombras",
+      "link": "#"
+    }
+  ],
+
+  "_comentario_events": "Slides del carrusel de eventos. 'vip: true' usa el degradado dorado animado; 'vip: false' usa el degradado rojo.",
+  "events": [
+    {
+      "id": "evento-vi",
+      "title": "Evento VI",
+      "glyph": "VI",
+      "tag": "Edición Limitada",
+      "magazineBadge": "VI · Evento Principal",
+      "rating": 4.9,
+      "genres": ["Exclusivo", "Inmersivo", "Nocturno"],
+      "synopsis": "Plazas limitadas · Confirmación inmediata. Una experiencia única donde el diseño, la música y la innovación se encuentran en un solo lugar.",
+      "themeColor": "#d81a2a",
+      "themeGlow": "rgba(216, 26, 42, 0.4)",
+      "onAccentText": null,
+      "bgImage": "assets/events/evento-vi-bg.jpg",
+      "dateLabel": "Próxima Fecha",
+      "dateValue": "15 · Nov · 2025",
+      "vip": false,
+      "link": "eventos.html"
+    },
+    {
+      "id": "evento-vip",
+      "title": "VI · VIP",
+      "glyph": "VI",
+      "tag": "VIP Access",
+      "magazineBadge": "VI · Zona Premium",
+      "rating": 5.0,
+      "genres": ["Premium", "Backstage", "Open Bar"],
+      "synopsis": "Plazas limitadas · Confirmación inmediata. Acceso prioritario, zona reservada y experiencia personalizada para los invitados más exclusivos.",
+      "themeColor": "#ffb703",
+      "themeGlow": "rgba(255, 183, 3, 0.4)",
+      "onAccentText": "#000",
+      "bgImage": "assets/events/evento-vip-bg.jpg",
+      "dateLabel": "Zona",
+      "dateValue": "VIP · Backstage",
+      "vip": true,
+      "link": "eventos.html"
+    }
+  ],
+
+  "_comentario_recentMangas": "Fila de 'Recién agregados'. Se muestran los primeros 10.",
+  "recentMangas": [
+    { "id": 1, "title": "Jujutsu Kaisen", "cover": "assets/covers/jujutsu-kaisen.jpg", "chapter": "Cap. 268", "genre": ["Acción", "Sobrenatural"], "rating": 4.9, "added": "2026-09-22" },
+    { "id": 2, "title": "Chainsaw Man", "cover": "assets/covers/chainsaw-man.jpg", "chapter": "Cap. 174", "genre": ["Gore", "Comedia Negra"], "rating": 4.8, "added": "2026-09-21" },
+    { "id": 3, "title": "Solo Leveling", "cover": "assets/covers/solo-leveling.jpg", "chapter": "Cap. 200", "genre": ["Fantasía", "Sistema"], "rating": 5.0, "added": "2026-09-20" },
+    { "id": 4, "title": "One Piece", "cover": "assets/covers/one-piece.jpg", "chapter": "Cap. 1125", "genre": ["Aventura", "Shonen"], "rating": 4.9, "added": "2026-09-19" },
+    { "id": 5, "title": "Demon Slayer", "cover": "assets/covers/demon-slayer.jpg", "chapter": "Cap. 205", "genre": ["Acción", "Histórico"], "rating": 4.7, "added": "2026-09-18" },
+    { "id": 6, "title": "My Hero Academia", "cover": "assets/covers/my-hero-academia.jpg", "chapter": "Cap. 430", "genre": ["Superhéroes", "Acción"], "rating": 4.6, "added": "2026-09-17" },
+    { "id": 7, "title": "Attack on Titan", "cover": "assets/covers/attack-on-titan.jpg", "chapter": "Final", "genre": ["Drama", "Acción"], "rating": 4.9, "added": "2026-09-16" },
+    { "id": 8, "title": "Spy x Family", "cover": "assets/covers/spy-x-family.jpg", "chapter": "Cap. 105", "genre": ["Comedia", "Espionaje"], "rating": 4.8, "added": "2026-09-15" },
+    { "id": 9, "title": "Blue Lock", "cover": "assets/covers/blue-lock.jpg", "chapter": "Cap. 280", "genre": ["Deportes", "Competición"], "rating": 4.5, "added": "2026-09-14" },
+    { "id": 10, "title": "Oshi no Ko", "cover": "assets/covers/oshi-no-ko.jpg", "chapter": "Cap. 160", "genre": ["Drama", "Idols"], "rating": 4.7, "added": "2026-09-13" }
+  ],
+
+  "_comentario_notifications": "Panel de la campana. 'color' pinta la barrita lateral, 'unread' controla el punto rojo y el negrita.",
+  "notifications": [
+    { "id": 1, "title": "Jujutsu Kaisen", "chapter": "Capítulo 268 disponible", "cover": "assets/covers/jujutsu-kaisen.jpg", "time": "Hace 2 horas", "color": "#ff2a5f", "unread": true },
+    { "id": 2, "title": "Chainsaw Man", "chapter": "Cap. 174: El Demonio Envejecimiento", "cover": "assets/covers/chainsaw-man.jpg", "time": "Hace 5 horas", "color": "#ffb703", "unread": true },
+    { "id": 3, "title": "Solo Leveling", "chapter": "Cap. 200: El Monarca de las Sombras", "cover": "assets/covers/solo-leveling.jpg", "time": "Ayer", "color": "#00d2ff", "unread": false }
+  ],
+
+  "_comentario_ticker": "Barra fina de 'Novedades' arriba del header. Se rota sola cada 5s.",
+  "ticker": [
+    { "title": "Jujutsu Kaisen", "chapter": "Capítulo 268", "time": "hace 2 h", "link": "#" },
+    { "title": "Chainsaw Man", "chapter": "Capítulo 174", "time": "hace 5 h", "link": "#" },
+    { "title": "Solo Leveling", "chapter": "Capítulo 200", "time": "ayer", "link": "#" }
+  ]
+}
