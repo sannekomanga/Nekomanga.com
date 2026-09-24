@@ -17,7 +17,7 @@
   "genres": ["Acción", "Comedia", "Fantasía", "Ecchi"],
   "synopsis": "Rin, una joven que lleva una vida tranquila, se ve envuelta en un extraño incidente que la conecta con una legendaria espada y un mundo lleno de héroes, monstruos y batallas absurdas. A partir de entonces, deberá enfrentarse a enemigos cada vez más peligrosos mientras descubre los secretos que se esconden detrás de Rosen Garten.",
   "themeColor": "#10B981",
-  "themeGlow": "rgba(155, 89, 182, 0.4)",
+  "themeGlow": null",
   "onAccentText": null,
   "bgImage": "assets/bg/rosen-garten-saga.jpg",
   "coverImage": "assets/covers/rosen-garten-saga.jpg",
