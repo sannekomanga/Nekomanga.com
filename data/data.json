@@ -45,25 +45,6 @@
   "link": "#"
 },
 {
-  "id": "otogi-bukkoroshiamu",
-  "title": "Otogi Bukkoroshiamu",
-  "titleJp": "おとぎぶっ殺シアム",
-  "posterJp": "おとぎ話はこうではなかった",
-  "chapterTag": "Capítulo 53",
-  "magazine": "LINE Manga",
-  "rating": 3.1,
-  "genres": ["Acción", "Fantasía", "Gore"],
-  "synopsis": "Todo el mundo tiene un héroe favorito de los cuentos de hadas… ¿pero quién es el más fuerte de todos? Esta es una historia de muerte y renacimiento. Los protagonistas de los cuentos clásicos se enfrentan a duelos a muerte para cumplir sus sueños, esperanzas, deseos, odios y salvación. Resucitados y convocados al Coliseo de la Pesadilla por un misterioso monstruo llamado «Grimm P.», pelearán por el premio definitivo: resucitar a quien quieran y vivir felices para siempre.",
-  "themeColor": "#9b2226",
-  "themeGlow": "rgba(155, 34, 38, 0.4)",
-  "onAccentText": null,
-  "bgImage": "assets/covers/otogi-bukkoroshiamu-bg.jpg",
-  "coverImage": "assets/covers/otogi-bukkoroshiamu.jpg",
-  "chapterLabel": "Finalizado",
-  "chapterTitle": "Cap. 53: Conclusión",
-  "link": "#"
-},
-{
   "id": "himenospia",
   "title": "Himenospia",
   "titleJp": "ヒメノスピア",
@@ -86,23 +67,21 @@
 
   "_comentario_recentMangas": "Fila de 'Recién agregados'. Se muestran los primeros 10.",
   "recentMangas": [
-
-{ "id": 1, "title": "RaW Hero", "cover": "assets/covers/raw-hero.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Comedia", "Ecchi"], "rating": 3.1, "added": "2026-09-22" },
-{ "id": 2, "title": "Otogi Bukkoroshiamu", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "chapter": "Cap. 53", "genre": ["Acción", "Fantasía", "Gore"], "rating": 3.1, "added": "2026-09-22" },
-{ "id": 3, "title": "Himenospia", "cover": "assets/covers/himenospia.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Sobrenatural", "Drama"], "rating": 3.0, "added": "2026-09-22" }
+    { "id": 1, "title": "Rosen Garten Saga", "cover": "assets/covers/rosen-garten-saga.jpg", "chapter": "Cap. 78", "genre": ["Acción", "Comedia", "Fantasía", "Ecchi"], "rating": 4.5, "added": "2026-09-23" },
+    { "id": 2, "title": "RaW Hero", "cover": "assets/covers/raw-hero.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Comedia", "Ecchi"], "rating": 3.1, "added": "2026-09-22" },
+    { "id": 3, "title": "Himenospia", "cover": "assets/covers/himenospia.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Sobrenatural", "Drama"], "rating": 3.0, "added": "2026-09-22" }
 ],
-  
+
   "_comentario_notifications": "Panel de la campana. 'color' pinta la barrita lateral, 'unread' controla el punto rojo y el negrita.",
   "notifications": [
-{ "id": 1, "title": "RaW Hero", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/raw-hero.jpg", "time": "Hace 5 horas", "color": "#e63946", "unread": true },
-{ "id": 2, "title": "Otogi Bukkoroshiamu", "chapter": "Capítulo 53 disponible", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "time": "Hace 1 día", "color": "#9b2226", "unread": false },
-{ "id": 3, "title": "Himenospia", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/himenospia.jpg", "time": "Hace 3 días", "color": "#f4a261", "unread": true }
+    { "id": 1, "title": "Rosen Garten Saga", "chapter": "Capítulo 78 disponible", "cover": "assets/covers/rosen-garten-saga.jpg", "time": "Hace 1 hora", "color": "#9b59b6", "unread": true },
+    { "id": 2, "title": "RaW Hero", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/raw-hero.jpg", "time": "Hace 5 horas", "color": "#e63946", "unread": true },
+    { "id": 3, "title": "Himenospia", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/himenospia.jpg", "time": "Hace 3 días", "color": "#f4a261", "unread": true }
 ],
-  
+
   "_comentario_ticker": "Barra fina de 'Novedades' arriba del header. Se rota sola cada 5s.",
   "ticker": [
-{ "id": 2, "title": "RaW Hero", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/raw-hero.jpg", "time": "Hace 5 horas", "color": "#e63946", "unread": true },
-{ "id": 3, "title": "Otogi Bukkoroshiamu", "chapter": "Capítulo 53 disponible", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "time": "Hace 1 día", "color": "#9b2226", "unread": false },
-{ "id": 4, "title": "Himenospia", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/himenospia.jpg", "time": "Hace 3 días", "color": "#f4a261", "unread": true }
+    { "title": "Rosen Garten Saga", "chapter": "Capítulo 78", "time": "hace 1 h", "link": "#" },
+    { "title": "RaW Hero", "chapter": "Capítulo 41", "time": "hace 5 h", "link": "#" },
+    { "title": "Himenospia", "chapter": "Capítulo 41", "time": "hace 3 días", "link": "#" } 
 ]
-}
