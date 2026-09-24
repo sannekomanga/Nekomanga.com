@@ -2,11 +2,11 @@
   "site": {
     "name": "nekomanga",
     "version": "2.0.0"
-  },
+},
 
   "_comentario_heroSlides": "Slides del carrusel principal. Para agregar/editar un manga destacado, solo toca este arreglo — el HTML se genera solo.",
   "heroSlides": [
-  {   
+{   
   "id": "raw-hero",
   "title": "RaW Hero",
   "titleJp": "ロウヒーロー",
@@ -62,34 +62,28 @@
   "chapterLabel": "Finalizado",
   "chapterTitle": "Cap. 41: Conclusión",
   "link": "#"
-  }
-  ],
+}
+],
 
   "_comentario_recentMangas": "Fila de 'Recién agregados'. Se muestran los primeros 10.",
   "recentMangas": [
-    { "id": 1, "title": "Jujutsu Kaisen", "cover": "assets/covers/jujutsu-kaisen.jpg", "chapter": "Cap. 268", "genre": ["Acción", "Sobrenatural"], "rating": 4.9, "added": "2026-09-22" },
-    { "id": 2, "title": "Chainsaw Man", "cover": "assets/covers/chainsaw-man.jpg", "chapter": "Cap. 174", "genre": ["Gore", "Comedia Negra"], "rating": 4.8, "added": "2026-09-21" },
-    { "id": 3, "title": "Solo Leveling", "cover": "assets/covers/solo-leveling.jpg", "chapter": "Cap. 200", "genre": ["Fantasía", "Sistema"], "rating": 5.0, "added": "2026-09-20" },
-    { "id": 4, "title": "One Piece", "cover": "assets/covers/one-piece.jpg", "chapter": "Cap. 1125", "genre": ["Aventura", "Shonen"], "rating": 4.9, "added": "2026-09-19" },
-    { "id": 5, "title": "Demon Slayer", "cover": "assets/covers/demon-slayer.jpg", "chapter": "Cap. 205", "genre": ["Acción", "Histórico"], "rating": 4.7, "added": "2026-09-18" },
-    { "id": 6, "title": "My Hero Academia", "cover": "assets/covers/my-hero-academia.jpg", "chapter": "Cap. 430", "genre": ["Superhéroes", "Acción"], "rating": 4.6, "added": "2026-09-17" },
-    { "id": 7, "title": "Attack on Titan", "cover": "assets/covers/attack-on-titan.jpg", "chapter": "Final", "genre": ["Drama", "Acción"], "rating": 4.9, "added": "2026-09-16" },
-    { "id": 8, "title": "Spy x Family", "cover": "assets/covers/spy-x-family.jpg", "chapter": "Cap. 105", "genre": ["Comedia", "Espionaje"], "rating": 4.8, "added": "2026-09-15" },
-    { "id": 9, "title": "Blue Lock", "cover": "assets/covers/blue-lock.jpg", "chapter": "Cap. 280", "genre": ["Deportes", "Competición"], "rating": 4.5, "added": "2026-09-14" },
-    { "id": 10, "title": "Oshi no Ko", "cover": "assets/covers/oshi-no-ko.jpg", "chapter": "Cap. 160", "genre": ["Drama", "Idols"], "rating": 4.7, "added": "2026-09-13" }
-  ],
 
+{ "id": 1, "title": "RaW Hero", "cover": "assets/covers/raw-hero.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Comedia", "Ecchi"], "rating": 3.1, "added": "2026-09-22" },
+{ "id": 2, "title": "Otogi Bukkoroshiamu", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "chapter": "Cap. 53", "genre": ["Acción", "Fantasía", "Gore"], "rating": 3.1, "added": "2026-09-22" },
+{ "id": 3, "title": "Himenospia", "cover": "assets/covers/himenospia.jpg", "chapter": "Cap. 41", "genre": ["Acción", "Sobrenatural", "Drama"], "rating": 3.0, "added": "2026-09-22" }
+],
+  
   "_comentario_notifications": "Panel de la campana. 'color' pinta la barrita lateral, 'unread' controla el punto rojo y el negrita.",
   "notifications": [
-    { "id": 1, "title": "Jujutsu Kaisen", "chapter": "Capítulo 268 disponible", "cover": "assets/covers/jujutsu-kaisen.jpg", "time": "Hace 2 horas", "color": "#ff2a5f", "unread": true },
-    { "id": 2, "title": "Chainsaw Man", "chapter": "Cap. 174: El Demonio Envejecimiento", "cover": "assets/covers/chainsaw-man.jpg", "time": "Hace 5 horas", "color": "#ffb703", "unread": true },
-    { "id": 3, "title": "Solo Leveling", "chapter": "Cap. 200: El Monarca de las Sombras", "cover": "assets/covers/solo-leveling.jpg", "time": "Ayer", "color": "#00d2ff", "unread": false }
-  ],
-
+{ "id": 1, "title": "RaW Hero", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/raw-hero.jpg", "time": "Hace 5 horas", "color": "#e63946", "unread": true },
+{ "id": 2, "title": "Otogi Bukkoroshiamu", "chapter": "Capítulo 53 disponible", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "time": "Hace 1 día", "color": "#9b2226", "unread": false },
+{ "id": 3, "title": "Himenospia", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/himenospia.jpg", "time": "Hace 3 días", "color": "#f4a261", "unread": true }
+],
+  
   "_comentario_ticker": "Barra fina de 'Novedades' arriba del header. Se rota sola cada 5s.",
   "ticker": [
-    { "title": "Jujutsu Kaisen", "chapter": "Capítulo 268", "time": "hace 2 h", "link": "#" },
-    { "title": "Chainsaw Man", "chapter": "Capítulo 174", "time": "hace 5 h", "link": "#" },
-    { "title": "Solo Leveling", "chapter": "Capítulo 200", "time": "ayer", "link": "#" }
-  ]
+{ "id": 2, "title": "RaW Hero", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/raw-hero.jpg", "time": "Hace 5 horas", "color": "#e63946", "unread": true },
+{ "id": 3, "title": "Otogi Bukkoroshiamu", "chapter": "Capítulo 53 disponible", "cover": "assets/covers/otogi-bukkoroshiamu.jpg", "time": "Hace 1 día", "color": "#9b2226", "unread": false },
+{ "id": 4, "title": "Himenospia", "chapter": "Capítulo 41 disponible", "cover": "assets/covers/himenospia.jpg", "time": "Hace 3 días", "color": "#f4a261", "unread": true }
+]
 }
