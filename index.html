@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NekoManga — Tu biblioteca de manga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@400;600;800&family=Shippori+Mincho:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (inyectado por JS) -->
+  <div id="header-placeholder"></div>
+
+  <main class="main-content">
+
+    <!-- ========== HERO CAROUSEL PRINCIPAL ========== -->
+    <div class="carousel-viewport" id="carouselViewport">
+      <section class="manga-hero-carousel" id="mangaCarousel" aria-label="Manga Destacados">
+        
+        <div class="carousel-top-bar">
+          <div class="editorial-brand">NekoManga • Destacados</div>
+        </div>
+
+        <div class="carousel-stage" id="heroStage">
+          <!-- Slides generados por main.js a partir de data/data.json (heroSlides) -->
+        </div>
+
+        <div class="carousel-bottom-bar">
+          <div class="carousel-counter">
+            <span class="counter-current" id="counterCurrent">01</span>
+            <span class="counter-divider">/</span>
+            <span class="counter-total" id="counterTotal">03</span>
+          </div>
+          <div class="carousel-indicators" id="indicatorContainer">
+            <!-- Generados por main.js -->
+          </div>
+          <div class="carousel-nav-btns">
+            <button class="nav-btn" id="prevBtn" aria-label="Anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="nav-btn" id="nextBtn" aria-label="Siguiente">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========== RANKING MINI - 10 MÁS RECIENTES ========== -->
+    <section class="ranking-section">
+      <h2 class="section-title">Recién <span>agregados</span></h2>
+      <div class="ranking-scroll" id="rankingList">
+        <!-- Rellenado por JS desde data.json -->
+      </div>
+    </section>
+
+    <!-- ========== EVENTOS CAROUSEL ========== -->
+    <section style="margin-top: 48px;">
+      <h2 class="section-title">Próximos <span>eventos</span></h2>
+      <div class="carousel-viewport event-carousel" id="eventViewport">
+        <section class="manga-hero-carousel" id="eventCarousel" aria-label="Eventos">
+          <div class="carousel-stage" id="eventStage">
+            <!-- Slides generados por main.js a partir de data/data.json (events) -->
+          </div>
+          <div class="carousel-bottom-bar">
+            <div class="carousel-indicators" id="eventIndicatorContainer">
+              <!-- Generados por main.js -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (inyectado por JS) -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
