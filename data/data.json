@@ -6,7 +6,26 @@
 
   "_comentario_heroSlides": "Slides del carrusel principal. Para agregar/editar un manga destacado, solo toca este arreglo — el HTML se genera solo.",
   "heroSlides": [
-{   
+{
+  "id": "Rosen Garten-Saga",
+  "title": "Rosen Garten Saga",
+  "titleJp": "ローゼンガーテン・サーガ",
+  "posterJp": "ローゼンガーテン・サーガ",
+  "chapterTag": "Capítulo 78",
+  "magazine": "Comic Ryu",
+  "rating": 4.5,
+  "genres": ["Acción", "Comedia", "Fantasía", "Ecchi"],
+  "synopsis": "Rin, una joven que lleva una vida tranquila, se ve envuelta en un extraño incidente que la conecta con una legendaria espada y un mundo lleno de héroes, monstruos y batallas absurdas. A partir de entonces, deberá enfrentarse a enemigos cada vez más peligrosos mientras descubre los secretos que se esconden detrás de Rosen Garten.",
+  "themeColor": "#9b59b6",
+  "themeGlow": "rgba(155, 89, 182, 0.4)",
+  "onAccentText": null,
+  "bgImage": "assets/covers/rosen-garten-saga-bg.jpg",
+  "coverImage": "assets/covers/rosen-garten-saga.jpg",
+  "chapterLabel": "En publicación",
+  "chapterTitle": "Cap. 78",
+  "link": "#"
+}
+{  
   "id": "raw-hero",
   "title": "RaW Hero",
   "titleJp": "ロウヒーロー",
