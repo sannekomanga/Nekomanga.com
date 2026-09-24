@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión — NekoManga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <header class="auth-header">
+    <a href="index.html" class="logo">nekomanga</a>
+  </header>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1 class="auth-title">Bienvenido</h1>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" type="button">Iniciar sesión</button>
+        <button class="auth-tab" id="tabRegister" type="button">Crear cuenta</button>
+      </div>
+
+      <div class="auth-message" id="authMessage"></div>
+
+      <button class="btn-google" id="btnGoogle" type="button">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47c-.28 1.5-1.13 2.77-2.4 3.62v3h3.88c2.27-2.09 3.57-5.17 3.57-8.81z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.95-2.92l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.26v3.1C3.24 21.3 7.28 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.27A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.27v-3.1H1.26A11.98 11.98 0 0 0 0 12c0 1.94.46 3.77 1.26 5.37z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0 7.28 0 3.24 2.7 1.26 6.63l4.01 3.1C6.22 6.88 8.87 4.77 12 4.77z"/></svg>
+        Continuar con Google
+      </button>
+
+      <div class="auth-divider">o con tu correo</div>
+
+      <!-- ===== Iniciar sesión ===== -->
+      <div class="auth-panel active" id="panelLogin">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Correo electrónico</label>
+            <input type="email" id="loginEmail" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-primary" id="btnLoginSubmit">Entrar</button>
+        </form>
+      </div>
+
+      <!-- ===== Crear cuenta ===== -->
+      <div class="auth-panel" id="panelRegister">
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="registerEmail">Correo electrónico</label>
+            <input type="email" id="registerEmail" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Contraseña</label>
+            <input type="password" id="registerPassword" placeholder="Mínimo 6 caracteres" minlength="6" required>
+          </div>
+          <p class="form-hint">Te enviaremos un correo para confirmar tu cuenta.</p>
+          <button type="submit" class="btn-primary" id="btnRegisterSubmit">Crear cuenta</button>
+        </form>
+      </div>
+
+      <a href="index.html" class="auth-back">← Volver a NekoManga</a>
+    </div>
+  </div>
+
+  <!-- SDK de Supabase (necesario antes de auth.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
