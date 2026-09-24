@@ -1,32 +1,49 @@
-/**
- * NekoManga - Main Script
- *
- * Los carruseles (hero + eventos), el ranking, el ticker de novedades y el
- * panel de notificaciones se generan a partir de data/data.json. Para
- * agregar o editar un manga/evento/notificación, solo hay que tocar ese
- * archivo — no hace falta tocar este script ni el HTML.
- */
-
 document.addEventListener('DOMContentLoaded', async () => {
-  // Inject header, footer, modal
+  
   const headerPlaceholder = document.getElementById('header-placeholder');
   const footerPlaceholder = document.getElementById('footer-placeholder');
   if (headerPlaceholder) headerPlaceholder.innerHTML = Components.renderHeader();
   if (footerPlaceholder) footerPlaceholder.innerHTML = Components.renderFooter();
   document.body.insertAdjacentHTML('beforeend', Components.renderLoginModal());
 
-  // Load data
-  let data = { heroSlides: [], events: [], recentMangas: [], notifications: [], ticker: [] };
-  try {
-    const res = await fetch('data/data.json');
-    data = await res.json();
-  } catch (e) {
-    console.warn('No se pudo cargar data.json, usando datos de ejemplo');
+  
+  document.addEventListener('DOMContentLoaded', async () => {
+  const headerPlaceholder = document.getElementById('header-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+
+  if (headerPlaceholder) {
+    headerPlaceholder.innerHTML = Components.renderHeader();
   }
 
-  // ========== IMÁGENES CON RESPALDO (assets/ aún vacío = no se rompe) ==========
-  // Si una imagen en assets/ todavía no existe, se muestra un placeholder
-  // con la inicial del título en vez de un ícono roto.
+  if (footerPlaceholder) {
+    footerPlaceholder.innerHTML = Components.renderFooter();
+  }
+
+  document.body.insertAdjacentHTML(
+    'beforeend',
+    Components.renderLoginModal()
+  );
+
+  let data = {
+    heroSlides: [], events: [], recentMangas: [], notifications: [], ticker: []
+  };
+
+  try {
+    const res = await fetch('data/data.json');
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    }
+
+    data = await res.json();
+
+  } catch (e) {
+    console.error('Error cargando data.json:', e);
+    console.warn('No se pudo cargar data.json, usando datos vacíos');
+  }
+
+  function placeholderDataUri(text, color) {
+  
   function placeholderDataUri(text, color) {
     const initial = (text || '?').trim().charAt(0).toUpperCase();
     const bg = color || '#1a1822';
@@ -42,8 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fallback = placeholderDataUri(alt, color).replace(/'/g, '%27');
     return `<img src="${src}" alt="${alt}" ${extraAttrs || ''} onerror="this.onerror=null;this.src='${fallback}';">`;
   }
-
-  // ========== TICKER DE NOVEDADES (barra superior del header) ==========
+ 
   const tickerViewport = document.getElementById('tickerViewport');
   if (tickerViewport && data.ticker && data.ticker.length) {
     tickerViewport.innerHTML = data.ticker.map((t, i) => `
@@ -74,7 +90,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // ========== NOTIFICACIONES (panel de la campana) ==========
   const notifList = document.getElementById('notifList');
   const notifBadge = document.getElementById('notifBadge');
   if (notifList && data.notifications) {
@@ -93,7 +108,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (notifBadge) notifBadge.hidden = !hasUnread;
   }
 
-  // ========== RANKING MINI (10 recientes) ==========
   const rankingContainer = document.getElementById('rankingList');
   if (rankingContainer && data.recentMangas) {
     rankingContainer.innerHTML = data.recentMangas.slice(0, 10).map((m, i) => `
@@ -107,8 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
     `).join('');
   }
-
-  // ========== POPUPS ==========
+  
   const btnMenu = document.getElementById('btnMenu');
   const menuPopup = document.getElementById('menuPopup');
   const btnNotif = document.getElementById('btnNotif');
@@ -141,8 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     notifList?.querySelectorAll('.notif-item.is-unread').forEach(n => n.classList.remove('is-unread'));
     if (notifBadge) notifBadge.hidden = true;
   });
-
-  // ========== LOGIN MODAL ==========
+ 
   const loginModal = document.getElementById('loginModal');
   const btnOpenLogin = document.getElementById('btnOpenLogin');
   const btnCloseLogin = document.getElementById('btnCloseLogin');
@@ -176,7 +188,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     loginModal.classList.remove('open');
   });
 
-  // ========== HERO CAROUSEL: generar slides + indicadores desde JSON ==========
   const heroStage = document.getElementById('heroStage');
   if (heroStage && data.heroSlides && data.heroSlides.length) {
     heroStage.innerHTML = data.heroSlides.map((m, i) => heroSlideTemplate(m, i, imgWithFallback)).join('');
@@ -189,8 +200,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `).join('');
     }
   }
-
-  // ========== EVENT CAROUSEL: generar slides + indicadores desde JSON ==========
+  
   const eventStage = document.getElementById('eventStage');
   if (eventStage && data.events && data.events.length) {
     eventStage.innerHTML = data.events.map((ev, i) => eventSlideTemplate(ev, i)).join('');
@@ -203,19 +213,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       `).join('');
     }
   }
-
-  // ========== MAIN HERO CAROUSEL ==========
+  
   initHeroCarousel();
 
-  // ========== EVENT CAROUSEL ==========
   initEventCarousel();
 });
 
-/**
- * Genera el markup de un slide del carrusel principal a partir de una
- * entrada de data.json (heroSlides). Mantiene exactamente las mismas
- * clases CSS que antes; solo cambia de dónde sale el contenido.
- */
 function heroSlideTemplate(m, index, imgWithFallback) {
   const chipStyle = `background:${m.themeColor};${m.onAccentText ? ` color:${m.onAccentText};` : ''}`;
   return `
@@ -272,11 +275,6 @@ function heroSlideTemplate(m, index, imgWithFallback) {
   `;
 }
 
-/**
- * Genera el markup de un slide del carrusel de eventos a partir de una
- * entrada de data.json (events). El glyph "VI"/"VIP" usa clases CSS
- * (.event-glyph / .event-glyph--vip) en vez de estilos inline gigantes.
- */
 function eventSlideTemplate(ev, index) {
   const chipStyle = `background:${ev.themeColor};${ev.onAccentText ? ` color:${ev.onAccentText};` : ''}`;
   return `
