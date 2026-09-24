@@ -6,24 +6,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (footerPlaceholder) footerPlaceholder.innerHTML = Components.renderFooter();
   document.body.insertAdjacentHTML('beforeend', Components.renderLoginModal());
 
-  
-  document.addEventListener('DOMContentLoaded', async () => {
-  const headerPlaceholder = document.getElementById('header-placeholder');
-  const footerPlaceholder = document.getElementById('footer-placeholder');
-
-  if (headerPlaceholder) {
-    headerPlaceholder.innerHTML = Components.renderHeader();
-  }
-
-  if (footerPlaceholder) {
-    footerPlaceholder.innerHTML = Components.renderFooter();
-  }
-
-  document.body.insertAdjacentHTML(
-    'beforeend',
-    Components.renderLoginModal()
-  );
-
   let data = {
     heroSlides: [], events: [], recentMangas: [], notifications: [], ticker: []
   };
@@ -42,8 +24,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.warn('No se pudo cargar data.json, usando datos vacíos');
   }
 
-  function placeholderDataUri(text, color) {
-  
   function placeholderDataUri(text, color) {
     const initial = (text || '?').trim().charAt(0).toUpperCase();
     const bg = color || '#1a1822';
