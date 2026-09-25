@@ -20,13 +20,13 @@ jobs:
   audit:
     name: Auditoría de solo lectura
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # necesario para diffs y gitleaks con historial
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -36,7 +36,7 @@ jobs:
       - name: Instalar dependencias Python
         run: |
           python -m pip install --upgrade pip
-          pip install openai pyyaml
+          pip install openai anthropic pyyaml semgrep
 
       - name: Instalar gitleaks
         run: |
@@ -50,11 +50,13 @@ jobs:
         id: auditor
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}   # opcional (proveedores compatibles)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           AUDITOR_MODEL: ${{ vars.AUDITOR_MODEL || 'gpt-4o' }}
+          AUDITOR_PROVIDER: ${{ vars.AUDITOR_PROVIDER || 'openai' }}
           AUDITOR_MAX_TOKENS: ${{ vars.AUDITOR_MAX_TOKENS || '8000' }}
           AUDITOR_MAX_INPUT_CHARS: ${{ vars.AUDITOR_MAX_INPUT_CHARS || '120000' }}
-          AUDITOR_PROVIDER: ${{ vars.AUDITOR_PROVIDER || 'openai' }}
+          AUDITOR_SEMGREP_CONFIG: ${{ vars.AUDITOR_SEMGREP_CONFIG || 'p/security-audit' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           GITHUB_BASE_REF: ${{ github.base_ref }}
         run: python auditor/auditor.py
@@ -83,7 +85,6 @@ jobs:
             if (fs.existsSync(path)) {
               body = fs.readFileSync(path, 'utf8');
             }
-            // Buscar comentario previo del bot para actualizarlo
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
