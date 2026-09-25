@@ -1,6 +1,6 @@
 # AUDITORÍA DEL REPOSITORIO
 
-**Fecha:** 2026-09-25 00:16 UTC  
+**Fecha:** 2026-09-25 00:30 UTC  
 **Auditor:** Auditor Automático v2  
 **Modo:** Solo lectura — Repositorio completo  
 **Estado:** COMPLETADA CON LIMITACIONES
@@ -49,4 +49,6 @@ Las ejecuciones posteriores añadirán una entrada con fecha, resumen y hallazgo
 ### 2026-09-24 23:26 UTC
 - Archivos: 11 | Hallazgos locales: 3 | Evento: push
 ### 2026-09-25 00:16 UTC
+- Archivos: 11 | Hallazgos locales: 3 | Evento: workflow_dispatch
+### 2026-09-25 00:30 UTC
 - Archivos: 11 | Hallazgos locales: 3 | Evento: workflow_dispatch
