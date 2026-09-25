@@ -1,13 +1,13 @@
 # AUDITORÍA DEL REPOSITORIO
 
-**Fecha:** 2026-09-24 23:26 UTC  
+**Fecha:** 2026-09-25 00:16 UTC  
 **Auditor:** Auditor Automático v2  
 **Modo:** Solo lectura — Repositorio completo  
 **Estado:** COMPLETADA CON LIMITACIONES
 
 ## Resumen
 
-La revisión local se ejecutó correctamente. El análisis de IA no pudo completarse: `No existe el secreto OPENAI_API_KEY.`
+La revisión local se ejecutó correctamente. El análisis de IA no pudo completarse: `Connection error.`
 
 ## Métricas
 
@@ -18,7 +18,7 @@ La revisión local se ejecutó correctamente. El análisis de IA no pudo complet
 | Bytes leídos | 100,536 |
 | Hallazgos locales | 3 |
 | Duración | 0.0s |
-| Evento | push |
+| Evento | workflow_dispatch |
 
 ## Hallazgos preliminares (herramientas locales)
 
@@ -48,3 +48,5 @@ Las ejecuciones posteriores añadirán una entrada con fecha, resumen y hallazgo
 **Regla:** este auditor informa; no modifica archivos del proyecto salvo `AUDITORIA.md`.
 ### 2026-09-24 23:26 UTC
 - Archivos: 11 | Hallazgos locales: 3 | Evento: push
+### 2026-09-25 00:16 UTC
+- Archivos: 11 | Hallazgos locales: 3 | Evento: workflow_dispatch
