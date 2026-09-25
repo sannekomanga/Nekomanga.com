@@ -120,10 +120,10 @@ permissions:
 
 ## Mejoras v2 → v2.1
 
-- ✅ **Semgrep** integrado (SAST real)
-- ✅ **Anthropic Claude** nativo (`ANTHROPIC_API_KEY` + `provider: anthropic`)
-- ✅ Hallazgos etiquetados por herramienta (gitleaks / semgrep / heuristics)
-- ✅ Resumen de PR muestra conteo por herramienta
+- **Semgrep** integrado (SAST real)
+- **Anthropic Claude** nativo (`ANTHROPIC_API_KEY` + `provider: anthropic`)
+- Hallazgos etiquetados por herramienta (gitleaks / semgrep / heuristics)
+- Resumen de PR muestra conteo por herramienta
 
 ---
 
