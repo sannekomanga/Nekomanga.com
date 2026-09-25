@@ -1,6 +1,6 @@
 # AUDITORÍA DEL REPOSITORIO
 
-**Fecha:** 2026-09-25 01:02 UTC  
+**Fecha:** 2026-09-25 01:18 UTC  
 **Auditor:** Auditor Automático v2  
 **Modo:** Solo lectura — Repositorio completo  
 **Estado:** COMPLETADA CON LIMITACIONES
@@ -18,7 +18,7 @@ La revisión local se ejecutó correctamente. El análisis de IA no pudo complet
 | Bytes leídos | 100,536 |
 | Hallazgos locales | 3 |
 | Duración | 0.0s |
-| Evento | workflow_dispatch |
+| Evento | push |
 
 ## Hallazgos preliminares (herramientas locales)
 
@@ -56,3 +56,5 @@ Las ejecuciones posteriores añadirán una entrada con fecha, resumen y hallazgo
 - Archivos: 11 | Hallazgos locales: 3 | Evento: workflow_dispatch
 ### 2026-09-25 01:02 UTC
 - Archivos: 11 | Hallazgos locales: 3 | Evento: workflow_dispatch
+### 2026-09-25 01:18 UTC
+- Archivos: 11 | Hallazgos locales: 3 | Evento: push
