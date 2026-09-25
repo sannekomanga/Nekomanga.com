@@ -1,0 +1,104 @@
+# Configuración del Auditor Automático v2.1
+# Se puede sobrescribir con variables de entorno (ver README)
+
+# --- Proveedor de IA ---
+# "openai"     → OpenAI oficial o cualquier API compatible (OPENAI_BASE_URL)
+# "anthropic"  → Anthropic Claude (requiere ANTHROPIC_API_KEY)
+provider: "openai"
+
+# Modelos recomendados:
+#   OpenAI:    gpt-4o | gpt-4.1 | gpt-4o-mini
+#   Anthropic: claude-sonnet-4-5 | claude-opus-4-5 | claude-haiku-4-5
+model: "gpt-4o"
+
+max_tokens: 8000                   # Límite de salida del informe
+max_input_chars: 120000            # Límite aproximado de caracteres enviados al LLM
+
+# --- Herramientas locales ---
+enable_gitleaks: true
+enable_semgrep: true
+enable_local_heuristics: true
+
+# Reglas Semgrep (puedes usar varias separadas por espacio)
+# Ejemplos: p/security-audit  p/owasp-top-ten  p/cwe-top-25  auto
+semgrep_config: "p/security-audit"
+
+# --- Directorios ignorados ---
+ignored_dirs:
+  - ".git"
+  - ".github"
+  - "node_modules"
+  - "vendor"
+  - "dist"
+  - "build"
+  - ".next"
+  - ".cache"
+  - "__pycache__"
+  - ".venv"
+  - "venv"
+  - "coverage"
+  - ".turbo"
+  - ".nuxt"
+
+# --- Extensiones de texto a analizar ---
+text_extensions:
+  - ".html"
+  - ".htm"
+  - ".css"
+  - ".scss"
+  - ".js"
+  - ".mjs"
+  - ".cjs"
+  - ".ts"
+  - ".tsx"
+  - ".jsx"
+  - ".json"
+  - ".md"
+  - ".yml"
+  - ".yaml"
+  - ".toml"
+  - ".ini"
+  - ".env.example"
+  - ".sql"
+  - ".py"
+  - ".php"
+  - ".java"
+  - ".kt"
+  - ".go"
+  - ".rs"
+  - ".txt"
+  - ".sh"
+  - ".bash"
+  - ".dockerfile"
+
+# --- Archivos/patrones críticos (se priorizan y se envían completos) ---
+critical_patterns:
+  - "**/auth*"
+  - "**/login*"
+  - "**/supabase*"
+  - "**/*rls*"
+  - "**/*policy*"
+  - "**/middleware*"
+  - "**/security*"
+  - "package.json"
+  - "package-lock.json"
+  - "pnpm-lock.yaml"
+  - "yarn.lock"
+  - "requirements.txt"
+  - "pyproject.toml"
+  - "Cargo.toml"
+  - "go.mod"
+  - ".env.example"
+  - "**/Dockerfile*"
+  - "**/docker-compose*"
+  - "**/*secret*"
+  - "**/*credential*"
+  - "**/config*"
+
+# --- Límites de tamaño ---
+max_file_bytes: 150000
+max_total_bytes: 1800000
+max_critical_file_bytes: 300000
+
+# --- Historial ---
+history_keep: 5                    # Cuántas auditorías anteriores conservar
