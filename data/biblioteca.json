@@ -1,0 +1,52 @@
+{
+  "_comentario_library": "Catálogo de manga para biblioteca.html. Cada objeto es una obra; agrega o quita entradas aquí y la grilla, los filtros y el buscador se actualizan solos.",
+  "library": [
+    {
+      "id": "rosen-garten-saga",
+      "title": "Rosen Garten Saga",
+      "cover": "assets/covers/rosen-garten-saga.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Fantasía",
+        "Ecchi"
+      ],
+      "status": "En publicación",
+      "rating": 4.5,
+      "chapter": "Cap. 78",
+      "added": "2026-09-23",
+      "link": "#"
+    },
+    {
+      "id": "raw-hero",
+      "title": "RaW Hero",
+      "cover": "assets/covers/raw-hero.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Ecchi"
+      ],
+      "status": "Finalizado",
+      "rating": 3.1,
+      "chapter": "Cap. 41",
+      "added": "2026-09-22",
+      "link": "#"
+    },
+    {
+      "id": "himenospia",
+      "title": "Himenospia",
+      "cover": "assets/covers/himenospia.jpg",
+      "genres": [
+        "Acción",
+        "Sobrenatural",
+        "Drama",
+        "Ciencia Ficción"
+      ],
+      "status": "Finalizado",
+      "rating": 3.0,
+      "chapter": "Cap. 41",
+      "added": "2026-09-22",
+      "link": "#"
+    }
+  ]
+}
