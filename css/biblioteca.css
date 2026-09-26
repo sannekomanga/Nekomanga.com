@@ -1,0 +1,351 @@
+/* ============================================
+   NEKOMANGA - Biblioteca
+   Usa las variables definidas en css/style.css
+   (colores, fuentes, radios, transiciones).
+   ============================================ */
+
+.biblioteca-page {
+  padding-top: 24px;
+}
+
+/* ---- Encabezado ---- */
+.biblio-hero {
+  margin-bottom: 28px;
+}
+
+.biblio-title {
+  font-family: var(--font-title);
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.biblio-subtitle {
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ---- Barra de herramientas: búsqueda + filtros ---- */
+.biblio-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.biblio-search {
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 200px;
+}
+
+.biblio-search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.biblio-search input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px 0 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.biblio-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.biblio-search input:focus {
+  outline: none;
+  border-color: var(--accent-red);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.biblio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.biblio-filters select {
+  height: 44px;
+  padding: 0 34px 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238e8a9f' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.biblio-filters select:hover,
+.biblio-filters select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.biblio-filters select option {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+/* ---- Grilla de resultados ---- */
+.biblio-grid-wrap {
+  min-height: 200px;
+}
+
+.biblio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.biblio-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px 16px;
+  font-size: 0.95rem;
+}
+
+.biblio-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease-out-expo), border-color 0.25s;
+}
+
+.biblio-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 42, 95, 0.4);
+}
+
+.biblio-card-cover-link {
+  display: block;
+}
+
+.biblio-card-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #1a1822;
+}
+
+.biblio-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.biblio-card:hover .biblio-card-cover img {
+  transform: scale(1.06);
+}
+
+.biblio-status-badge {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.status-publicando { border-color: rgba(16, 185, 129, 0.5); color: #4ee6ad; }
+.status-finalizado { border-color: rgba(0, 210, 255, 0.5); color: #6fdcff; }
+.status-pausado { border-color: rgba(255, 183, 3, 0.5); color: #ffce5c; }
+
+.biblio-bookmark-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.biblio-bookmark-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.biblio-bookmark-btn:hover {
+  transform: scale(1.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.biblio-bookmark-btn.is-active {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.biblio-bookmark-btn.is-active svg {
+  fill: #fff;
+}
+
+.biblio-card-info {
+  padding: 10px 12px 12px;
+}
+
+.biblio-card-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em;
+}
+
+.biblio-card-title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.biblio-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.biblio-rating {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.biblio-card-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.biblio-card-genres .pill {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
+/* ---- Paginación ---- */
+.biblio-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 36px;
+}
+
+.page-btn {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.page-btn.active {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #fff;
+}
+
+.page-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.page-ellipsis {
+  color: var(--text-muted);
+  padding: 0 4px;
+  font-size: 0.85rem;
+}
+
+/* ---- Skeleton (mientras carga) ---- */
+.biblio-card.is-skeleton {
+  pointer-events: none;
+}
+
+.biblio-skeleton-block {
+  background: linear-gradient(100deg, rgba(255,255,255,0.03) 30%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 70%);
+  background-size: 200% 100%;
+  animation: skeletonShine 1.4s ease-in-out infinite;
+}
+
+@keyframes skeletonShine {
+  0% { background-position: 150% 0; }
+  100% { background-position: -50% 0; }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .biblio-title { font-size: 1.6rem; }
+  .biblio-toolbar { padding: 12px; }
+  .biblio-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+  .biblio-filters { width: 100%; }
+  .biblio-filters select { flex: 1 1 auto; }
+}
+
+@media (max-width: 479px) {
+  .biblio-grid { grid-template-columns: repeat(2, 1fr); }
+}
