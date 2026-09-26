@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca — NekoManga</title>
+  <meta name="description" content="Explora todo el catálogo de manga, manhwa y manhua de NekoManga. Busca por título, filtra por género y estado, y guarda tus lecturas favoritas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@400;600;800&family=Shippori+Mincho:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="main-content biblioteca-page">
+
+    <section class="biblio-hero">
+      <h1 class="biblio-title">Biblioteca</h1>
+      <p class="biblio-subtitle" id="biblioCount">Cargando catálogo…</p>
+    </section>
+
+    <section class="biblio-toolbar">
+      <div class="biblio-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="biblioSearch" placeholder="Buscar por título..." aria-label="Buscar manga">
+      </div>
+
+      <div class="biblio-filters">
+        <select id="filterGenre" aria-label="Filtrar por género">
+          <option value="">Todos los géneros</option>
+        </select>
+        <select id="filterStatus" aria-label="Filtrar por estado">
+          <option value="">Todos los estados</option>
+          <option value="En publicación">En publicación</option>
+          <option value="Finalizado">Finalizado</option>
+          <option value="Pausado">Pausado</option>
+        </select>
+        <select id="filterSort" aria-label="Ordenar por">
+          <option value="recent">Recién agregados</option>
+          <option value="az">Título A - Z</option>
+          <option value="za">Título Z - A</option>
+          <option value="rating">Mejor valorados</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="biblio-grid-wrap">
+      <div class="biblio-grid" id="biblioGrid" aria-live="polite"></div>
+      <p class="biblio-empty" id="biblioEmpty" hidden>
+        No encontramos ningún manga con esos filtros. Prueba con otra búsqueda o quita algún filtro.
+      </p>
+    </section>
+
+    <nav class="biblio-pagination" id="biblioPagination" aria-label="Paginación de la biblioteca"></nav>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/biblioteca.js"></script>
+
+  <!-- Login/registro (Supabase) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
