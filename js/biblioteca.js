@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const res = await fetch('data/data.json');
+    const res = await fetch('data/biblioteca.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
     const data = await res.json();
     library = (Array.isArray(data.library) && data.library.length)
